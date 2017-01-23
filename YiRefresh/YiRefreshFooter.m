@@ -83,6 +83,7 @@
  */
 - (void)endRefreshing
 {
+    if (!isRefresh) return;
     isRefresh=NO;
     dispatch_async(dispatch_get_main_queue(), ^{
         [UIView animateWithDuration:0.3 animations:^{
